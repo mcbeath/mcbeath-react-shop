@@ -1,0 +1,21 @@
+{
+  "name": "mcbeath",
+  "version": "1.0.0",
+  "description": "my mcbeath network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-koa": "^1.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "graphql": "^0.11.5",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.1.1"
+  }
+}

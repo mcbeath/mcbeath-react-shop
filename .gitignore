@@ -1,0 +1,8 @@
+# Windows:产生的垃圾文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#不提交的文件
+node_modules
+build
