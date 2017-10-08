@@ -1,12 +1,12 @@
-#mcbeath-react-shop
-##搭建Koa2环境
+# mcbeath-react-shop
+## 搭建Koa2环境
 本地安装koa2和babel环境,Koa2需要使用ES7语法，所以node要切换7.10以上的版本。
 
     nvm use 7
     npm install koa --save
     npm install babel-core babel-polyfill babel-register babel-preset-env --save-dev
-###解释下babel几个模块的作用：
-####bebel-polyfill
+### 解释下babel几个模块的作用：
+#### bebel-polyfill
 因为Babel默认是不会转换Map,Promise等全局对象，这里就需要加载bebel-polyfill模块进行转换
 ####babel-preset-env
 babel-preset-env 是一个新的 preset模块，可以根据配置的目标运行环境（environment）自动启用需要的 babel 插件。有了babel-preset-env就不用考虑babel-preset-es2015.
@@ -44,9 +44,9 @@ server.js文件中的代码如下：
     
 到这里为止，koa2的环境就已经搭建完成
 
-##graphql服务
+## graphql服务
 
-###graphql
+### graphql
 GraphQL 是一个由Facebook提出的 应用层查询语言. 使用 GraphQL, 你可以基于图模式定义你的后端. 然后客户端就可以请求所需要的数据集。
 ![](http://upload-images.jianshu.io/upload_images/551828-8d055caea7562605.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 因此, 你不必因为客户端数据需求的变更而改变你的后端. 这解决了管理REST API中的最大的问题.
@@ -101,11 +101,11 @@ GraphQL同样能够让客户端程序高效地批量获取数据. 例如, 看一
     
 这里是它的规范：http://facebook.github.io/graphql
 
-###apollo-server-koa
+### apollo-server-koa
 
 这是Koa整合的graphql服务
 
-####用例
+#### 用例
     import koa from 'koa'; // koa@2
     import koaRouter from 'koa-router';
     import koaBody from 'koa-bodyparser';
@@ -125,7 +125,7 @@ GraphQL同样能够让客户端程序高效地批量获取数据. 例如, 看一
     app.use(router.allowedMethods());
     app.listen(PORT);
 
-###GraphiQL
+### GraphiQL
 
 使用apollo-server-koa服务在浏览器展示graphiql IDE，用于操作graphql。
 
@@ -146,7 +146,7 @@ GraphQL同样能够让客户端程序高效地批量获取数据. 例如, 看一
     	passHeader: `'Authorization': 'Bearer lorem ipsum'`
     }));
 
-###koa-bodyparser 
+### koa-bodyparser 
 
 https://www.npmjs.com/package/koa-bodyparser
 
@@ -169,7 +169,7 @@ koa@1对应koa-bodyparser@1
 
 koa@2对应koa-bodyparser@2
 
-###koa-router
+### koa-router
 
 > Router middleware for koa
 
@@ -189,7 +189,7 @@ Install using npm:
 
 npm install koa-router
 
-####用例：
+#### 用例：
 
     var Koa = require('koa');
     var Router = require('koa-router');
@@ -205,12 +205,12 @@ npm install koa-router
       .use(router.routes())
       .use(router.allowedMethods());
 
-##配置git忽略项目
+## 配置git忽略项目
 
 新建一个.gitignore文件，文件的内容如下：
 
     node_modules/
-##安装React和ReactDOM
+## 安装React和ReactDOM
 
     npm install react react-dom --save
 
