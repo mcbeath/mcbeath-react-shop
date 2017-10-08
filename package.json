@@ -2,20 +2,37 @@
   "name": "mcbeath",
   "version": "1.0.0",
   "description": "my mcbeath network",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js"
+    "start": "babel-node server.js",
+    "build-dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --colors"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "apollo-server-koa": "^1.1.2",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
-    "graphql": "^0.11.5",
+    "graphql": "^0.11.6",
+    "history": "^4.7.2",
     "koa": "^2.3.0",
     "koa-bodyparser": "^3.2.0",
-    "koa-router": "^7.1.1"
+    "koa-router": "^7.1.1",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "webpack": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "webpack-dev-server": "^2.9.1"
   }
 }
