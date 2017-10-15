@@ -41,6 +41,6 @@ module.exports = {
     hot: true,
     host: 'localhost',
     port: 3000,
-    contentBase: path.resolve(__dirname, 'views')
+    contentBase: path.resolve(__dirname, 'build')
   }
 }

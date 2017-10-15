@@ -20,7 +20,7 @@ router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }));
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.use(require('koa-static')(path.join(__dirname,'../build')));
+app.use(require('koa-static')(path.join(__dirname,'./build')));
 app.use(views(path.join(__dirname,'./views'),{
 	extension:'html'
 }))
@@ -32,6 +32,9 @@ app.use(async (ctx,next)=>{
 })
 //response
 app.use(async(ctx)=>{
+	
 	await ctx.render('index.html');
 })
+
+
 app.listen(PORT,()=>console.log(`localhost:${PORT}`));
