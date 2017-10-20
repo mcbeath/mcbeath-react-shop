@@ -146,6 +146,12 @@ GraphQL同样能够让客户端程序高效地批量获取数据. 例如, 看一
     	passHeader: `'Authorization': 'Bearer lorem ipsum'`
     }));
 
+### apollo例子
+
+https://github.com/namelos/apollo-example
+
+http://insights.thoughtworks.cn/author/wangyifan/
+
 ### koa-bodyparser 
 
 https://www.npmjs.com/package/koa-bodyparser
@@ -221,6 +227,13 @@ main.js的代码如下：
     import ReactDOM from 'react-dom';
     ReactDOM.render(<div>aaa</div>, document.getElementById('root'));
 
-https://github.com/namelos/apollo-example
-http://insights.thoughtworks.cn/author/wangyifan/
+### resolvers - just pass around multiple resolver objects,
+import { merge } from 'lodash';
+import { resolvers as gitHubResolvers } from './github/schema';
+import { resolvers as sqlResolvers } from './sql/schema';
+const rootResolvers = { ... };
+// Merge all of the resolver objects together
+const resolvers = merge(rootResolvers, gitHubResolvers, sqlResolvers);
+
+
 

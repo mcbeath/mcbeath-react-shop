@@ -1,21 +1,7 @@
-import {
-  graphql,
-  GraphQLSchema,
-  GraphQLObjectType,
-  GraphQLString
-} from 'graphql';
-
-var schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      hello: {
-        type: GraphQLString,
-        resolve() {
-          return 'world';
-        }
-      }
-    }
-  })
+import { makeExecutableSchema } from 'graphql-tools';
+import typeDefs from './types/typeDefs';
+import resolvers from './resolvers/resolvers'
+export const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
 });
-export default schema;
