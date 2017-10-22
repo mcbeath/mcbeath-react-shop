@@ -1,0 +1,14 @@
+
+type Counter {
+  amount: Int!
+}
+
+extend type Query {
+  counter: Counter
+}
+
+extend type Mutation {
+  addCounter(
+    amount: Int!
+  ): Counter
+}
